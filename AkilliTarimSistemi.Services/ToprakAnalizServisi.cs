@@ -1,0 +1,123 @@
+﻿using AkilliTarimSistemi.Core.DTOs;
+using AkilliTarimSistemi.Core.Entities;
+using AkilliTarimSistemi.DAL.UnitOfWork;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace AkilliTarimSistemi.Services
+{
+    public class ToprakAnalizServisi : IToprakAnalizServisi
+    {
+        private readonly IUnitOfWork _unitOfWork;
+
+        public ToprakAnalizServisi(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+
+        public async Task<IEnumerable<ToprakAnaliziDto>> GetAllAsync()
+        {
+            var analizler = await _unitOfWork.ToprakAnalizler.GetAllAsync();
+            return analizler.Select(a => new ToprakAnaliziDto
+            {
+                Id = a.Id,
+                // TarlaId ve TarlaAdi alanları kaldırıldı veya sıfırlandı
+                TarlaId = 0,
+                TarlaAdi = "",
+                AnalizTarihi = a.Tarih,
+                ToprakTipi = 0,
+                pH = a.pH,
+                ElektrikselIletkenlik = 0,
+                OrganikMadde = a.OrganikMadde,
+                Tuzluluk = (float)a.Tuzluluk,
+                Azot = a.Azot,
+                Fosfor = a.Fosfor,
+                Potasyum = a.Potasyum,
+                Demir = 0,
+                Cinko = 0,
+                Degerlendirme = "",
+                OnerilenGubre = "",
+                AnaliziYapanKullaniciId = 0,
+                KayitTarihi = DateTime.Now
+            }).ToList();
+        }
+
+        public async Task<ToprakAnaliziDto?> GetByIdAsync(int id)
+        {
+            var a = await _unitOfWork.ToprakAnalizler.GetByIdAsync(id);
+            if (a == null) return null;
+
+            return new ToprakAnaliziDto
+            {
+                Id = a.Id,
+                // TarlaId ve TarlaAdi alanları kaldırıldı veya sıfırlandı
+                TarlaId = 0,
+                TarlaAdi = "",
+                AnalizTarihi = a.Tarih,
+                ToprakTipi = 0,
+                pH = a.pH,
+                ElektrikselIletkenlik = 0,
+                OrganikMadde = a.OrganikMadde,
+                Tuzluluk = (float)a.Tuzluluk,
+                Azot = a.Azot,
+                Fosfor = a.Fosfor,
+                Potasyum = a.Potasyum,
+                Demir = 0,
+                Cinko = 0,
+                Degerlendirme = "",
+                OnerilenGubre = "",
+                AnaliziYapanKullaniciId = 0,
+                KayitTarihi = DateTime.Now
+            };
+        }
+
+        public async Task AddAsync(ToprakAnaliziDto dto)
+        {
+            var entity = new ToprakAnalizi
+            {
+                // Tarla bağımlılığı kaldırıldı, veritabanına null olarak set ediliyor
+               // TarlaId = null,
+                Tarih = dto.AnalizTarihi,
+                pH = dto.pH,
+                Azot = dto.Azot,
+                Fosfor = dto.Fosfor,
+                Potasyum = dto.Potasyum,
+                OrganikMadde = dto.OrganikMadde,
+                Tuzluluk = dto.Tuzluluk
+            };
+            await _unitOfWork.ToprakAnalizler.AddAsync(entity);
+            await _unitOfWork.CompleteAsync();
+        }
+
+        public async Task UpdateAsync(ToprakAnaliziDto dto)
+        {
+            var entity = await _unitOfWork.ToprakAnalizler.GetByIdAsync(dto.Id);
+            if (entity == null) throw new System.Exception("Analiz bulunamadı");
+
+            // Güncelleme işleminde de tarla bağımlılığı kaldırıldı
+            //ntity.TarlaId = null;
+            entity.Tarih = dto.AnalizTarihi;
+            entity.pH = dto.pH;
+            entity.Azot = dto.Azot;
+            entity.Fosfor = dto.Fosfor;
+            entity.Potasyum = dto.Potasyum;
+            entity.OrganikMadde = dto.OrganikMadde;
+            entity.Tuzluluk = dto.Tuzluluk;
+
+            _unitOfWork.ToprakAnalizler.Update(entity);
+            await _unitOfWork.CompleteAsync();
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            var entity = await _unitOfWork.ToprakAnalizler.GetByIdAsync(id);
+            if (entity != null)
+            {
+                _unitOfWork.ToprakAnalizler.Delete(entity);
+                await _unitOfWork.CompleteAsync();
+            }
+        }
+    }
+}
