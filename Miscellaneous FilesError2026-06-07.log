@@ -1,0 +1,50 @@
+
+
+Date:2026-06-07 01:09:06,247
+Thread:[1]
+Level:ERROR
+Logger:InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand                         [(null)]
+Message:System.ArgumentException: The path is not of a legal form.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.InternalGetDirectoryName(String path)
+   at InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand.queryStatusMenuCommand_BeforeQueryStatus(Object sender, EventArgs e) in C:\Git\RP\vsext_insertblazorcode\SyncfusionBlazorcodegenerator\SyncfusionCodeGeneratorMenuCommand.cs:line 386
+
+
+Date:2026-06-07 01:09:06,273
+Thread:[1]
+Level:ERROR
+Logger:InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand                         [(null)]
+Message:System.ArgumentException: The path is not of a legal form.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.InternalGetDirectoryName(String path)
+   at InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand.queryStatusMenuCommand_BeforeQueryStatus(Object sender, EventArgs e) in C:\Git\RP\vsext_pdfviewer_sdk_blazorcodegenerator\SyncfusionBlazorPDFViewercodegenerator\SyncfusionCodeGeneratorMenuCommand.cs:line 397
+
+
+Date:2026-06-07 01:09:06,279
+Thread:[1]
+Level:ERROR
+Logger:InsertBlazorCode.SyncfusionDocSDKCodeGeneratorMenuCommand                         [(null)]
+Message:System.ArgumentException: The path is not of a legal form.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.InternalGetDirectoryName(String path)
+   at InsertBlazorCode.SyncfusionDocSDKCodeGeneratorMenuCommand.queryStatusMenuCommand_BeforeQueryStatus(Object sender, EventArgs e) in C:\Git\RP\vsext_documentsdkblazorcodegenerator\SyncfusionBlazorDocumentSDKcodegenerator\SyncfusionDocSDKCodeGeneratorMenuCommand.cs:line 386
+
+
+Date:2026-06-07 01:09:06,286
+Thread:[1]
+Level:ERROR
+Logger:InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand                         [(null)]
+Message:System.ArgumentException: The path is not of a legal form.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.InternalGetDirectoryName(String path)
+   at InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand.queryStatusMenuCommand_BeforeQueryStatus(Object sender, EventArgs e) in C:\Git\RP\vsext_spreadsheet_sdk_blazorcodegenerator\SyncfusionBlazorSpreadsheetcodegenerator\SyncfusionCodeGeneratorMenuCommand.cs:line 397
+
+
+Date:2026-06-07 01:09:06,293
+Thread:[1]
+Level:ERROR
+Logger:InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand                         [(null)]
+Message:System.ArgumentException: The path is not of a legal form.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.InternalGetDirectoryName(String path)
+   at InsertBlazorCode.SyncfusionCodeGeneratorMenuCommand.queryStatusMenuCommand_BeforeQueryStatus(Object sender, EventArgs e) in C:\Git\RP\vsext_documenteditor_sdk_blazorcodegenerator\SyncfusionBlazorDocumentEditorcodegenerator\SyncfusionCodeGeneratorMenuCommand.cs:line 390

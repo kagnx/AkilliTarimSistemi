@@ -1,9 +1,35 @@
 <Solution>
-  <Project Path="AkilliTarimSistemi.Core/AkilliTarimSistemi.Core.csproj" />
-  <Project Path="AkilliTarimSistemi.DAL/AkilliTarimSistemi.DAL.csproj" />
-  <Project Path="AkilliTarimSistemi.IoT/AkilliTarimSistemi.IoT.csproj" />
-  <Project Path="AkilliTarimSistemi.ML/AkilliTarimSistemi.ML.csproj" />
-  <Project Path="AkilliTarimSistemi.ModelTrainer/AkilliTarimSistemi.ModelTrainer.csproj" />
-  <Project Path="AkilliTarimSistemi.Services/AkilliTarimSistemi.Services.csproj" />
-  <Project Path="AkilliTarimSistemi.UI/AkilliTarimSistemi.UI.csproj" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="AkilliTarimSistemi.Core/AkilliTarimSistemi.Core.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="AkilliTarimSistemi.DAL/AkilliTarimSistemi.DAL.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="AkilliTarimSistemi.IoT/AkilliTarimSistemi.IoT.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="AkilliTarimSistemi.ML/AkilliTarimSistemi.ML.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="AkilliTarimSistemi.ModelTrainer/AkilliTarimSistemi.ModelTrainer.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="AkilliTarimSistemi.Services/AkilliTarimSistemi.Services.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="AkilliTarimSistemi.UI/AkilliTarimSistemi.UI.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
 </Solution>
