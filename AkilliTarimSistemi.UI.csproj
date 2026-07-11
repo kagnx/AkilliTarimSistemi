@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<!-- Kararlı ve saf .NET 10 WinForms için net10.0-windows olarak güncellendi -->
+		<TargetFramework>net10.0-windows10.0.17763.0</TargetFramework>
+
+		<Nullable>enable</Nullable>
+
+		<NoWarn>$(NoWarn);CA1416;CS8618;CS8622;CS8605;CS8600;CS8602 </NoWarn>
+
+
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- NU1701 uyarısını tüm proje genelinde susturur -->
+		<NoWarn>$(NoWarn);NU1701</NoWarn>
+		<StartupObject>AkilliTarimSistemi.UI.Program</StartupObject>
+		<Platforms>AnyCPU;x86;x64</Platforms>
+	</PropertyGroup>
+
+	<!-- Diğer katmanların referansları -->
+
+	<!-- NuGet Paketleriniz -->
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.9">
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		  <PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.9">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.9" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.9" />
+		<PackageReference Include="Microsoft.ML.LightGbm" Version="5.0.0" />
+		<PackageReference Include="ScottPlot.WinForms" Version="5.1.59" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.9" />
+		<PackageReference Include="ClosedXML" Version="0.105.0" />
+		<PackageReference Include="itext7" Version="9.7.0" />
+		<PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="3.53.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="MLModels\gubre_onerisi_azot_model.zip">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="MLModels\gubre_onerisi_fosfor_model.zip">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="MLModels\gubre_onerisi_potasyum_model.zip">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="MLModels\UrunTavsiyeModel.zip">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="MLModels\urun_tavsiye_model.zip">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="MLModels\verim_tahmini_model.zip">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\AkilliTarimSistemi.Core\AkilliTarimSistemi.Core.csproj" />
+	  <ProjectReference Include="..\AkilliTarimSistemi.DAL\AkilliTarimSistemi.DAL.csproj" />
+	  <ProjectReference Include="..\AkilliTarimSistemi.ModelTrainer\AkilliTarimSistemi.ModelTrainer.csproj" />
+	  <ProjectReference Include="..\AkilliTarimSistemi.Services\AkilliTarimSistemi.Services.csproj" />
+	  <ProjectReference Include="..\AkilliTarimSistemi.ML\AkilliTarimSistemi.ML.csproj" />
+	  <ProjectReference Include="..\AkilliTarimSistemi.IoT\AkilliTarimSistemi.IoT.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Assets\" />
+	</ItemGroup>
+
+</Project>

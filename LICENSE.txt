@@ -1,3 +1,18 @@
+MIT Lisansı
+
+Telif Hakkı (c) [yıl] [tam ad]
+
+Bu yazılımın ve ilgili dokümantasyon dosyalarının ("Yazılım") bir kopyasını edinen herhangi bir kişiye,
+Yazılımı kısıtlama olmaksızın kullanma, kopyalama, değiştirme, birleştirme, yayınlama, dağıtma, alt lisanslama ve/veya satma hakları da dahil olmak üzere,
+Yazılımı kullanma izni ücretsiz olarak verilmektedir.
+Yazılımın kopyalarını kullanma, kopyalama, değiştirme, birleştirme, yayınlama, dağıtma, alt lisanslama ve/veya satma hakları da dahil olmak üzere,
+Yazılımın kendisine sağlandığı kişilere, aşağıdaki koşullara tabi olarak, bunu yapmalarına izin verilir:
+
+Yukarıdaki telif hakkı bildirimi ve bu izin bildirimi, Yazılımın tüm kopyalarına veya önemli bölümlerine dahil edilecektir.
+
+YAZILIM, HERHANGİ BİR GARANTİ OLMADAN, AÇIK VEYA ZIMNİ OLARAK, SATILABİLİRLİK, BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME GARANTİLERİ DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE, "OLDUĞU GİBİ" SAĞLANMAKTADIR. HİÇBİR DURUMDA YAZARLAR VEYA TELİF HAKKI SAHİPLERİ, SÖZLEŞME, HAKSIZ FİİL VEYA BAŞKA BİR NEDENLE ORTAYA ÇIKAN HERHANGİ BİR TALEP, ZARAR VEYA DİĞER YÜKÜMLÜLÜKLERDEN SORUMLU TUTULAMAZLAR.
+YAZILIMIN KULLANIMI VEYA YAZILIMLA İLGİLİ DİĞER İŞLEMLERDEN KAYNAKLANAN HERHANGİ BİR DURUMDA DA SORUMLU TUTULAMAZLAR.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 MIT License
 
 Copyright (c) [year] [fullname]
